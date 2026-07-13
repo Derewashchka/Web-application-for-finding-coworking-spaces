@@ -1,0 +1,614 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\auditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\auditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\coworkingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\coworkingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\encryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\encryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\data\\encryptedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:data\\encryptedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\icoworkingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\icoworkingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\auditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\models\\coworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:models\\coworking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\organizationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\organizationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\coworkingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\coworkingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\coworkingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\coworkingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\organizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\organizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|c:\\users\\admin\\onedrive\\desktop\\coworking_proj\\coworkingapi\\dtos\\paginatedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAD4D90-F4C6-4771-9CE4-7C9C2C7D4099}|CoworkingApi.csproj|solutionrelative:dtos\\paginatedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-13T10:47:21.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuditController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\AuditController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuditController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\AuditController.cs",
+              "RelativeToolTip": "Controllers\\AuditController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T12:04:16.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Notification.cs",
+              "RelativeToolTip": "Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:50:47.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Organization.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Organization.cs",
+              "RelativeDocumentMoniker": "Models\\Organization.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Organization.cs",
+              "RelativeToolTip": "Models\\Organization.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:28:40.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CoworkingService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\CoworkingService.cs",
+              "RelativeDocumentMoniker": "Services\\CoworkingService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\CoworkingService.cs",
+              "RelativeToolTip": "Services\\CoworkingService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowGwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:30:51.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwC0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:27:00.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAF8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:27:06.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:28:24.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-25T16:31:14.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\AuditLog.cs",
+              "RelativeDocumentMoniker": "Models\\AuditLog.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\AuditLog.cs",
+              "RelativeToolTip": "Models\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T11:59:10.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "Controllers\\BookingsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwIcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:26:46.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:01.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAWwAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:28:48.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:51:42.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:26:54.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EncryptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\EncryptionService.cs",
+              "RelativeDocumentMoniker": "Services\\EncryptionService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\EncryptionService.cs",
+              "RelativeToolTip": "Services\\EncryptionService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T11:28:02.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EncryptedConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Data\\EncryptedConverter.cs",
+              "RelativeDocumentMoniker": "Data\\EncryptedConverter.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Data\\EncryptedConverter.cs",
+              "RelativeToolTip": "Data\\EncryptedConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T11:29:52.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ICoworkingService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\ICoworkingService.cs",
+              "RelativeDocumentMoniker": "Services\\ICoworkingService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\ICoworkingService.cs",
+              "RelativeToolTip": "Services\\ICoworkingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:30:45.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuditService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\AuditService.cs",
+              "RelativeDocumentMoniker": "Services\\AuditService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\AuditService.cs",
+              "RelativeToolTip": "Services\\AuditService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T12:00:18.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:30:36.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:07.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Coworking.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Coworking.cs",
+              "RelativeDocumentMoniker": "Models\\Coworking.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Models\\Coworking.cs",
+              "RelativeToolTip": "Models\\Coworking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:28:54.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:31:06.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\UpdateProfileDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UpdateProfileDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\UpdateProfileDto.cs",
+              "RelativeToolTip": "DTOs\\UpdateProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T14:46:50.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ReviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\ReviewDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ReviewDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\ReviewDto.cs",
+              "RelativeToolTip": "DTOs\\ReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:30:06.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrganizationDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\OrganizationDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\OrganizationDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\OrganizationDto.cs",
+              "RelativeToolTip": "DTOs\\OrganizationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T14:57:50.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CoworkingDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\CoworkingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CoworkingDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\CoworkingDto.cs",
+              "RelativeToolTip": "DTOs\\CoworkingDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:48.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\BookingDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\BookingDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\BookingDto.cs",
+              "RelativeToolTip": "DTOs\\BookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:55.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\Auth\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\Auth\\RegisterDto.cs",
+              "RelativeToolTip": "DTOs\\Auth\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:36.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\Auth\\LoginDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\Auth\\LoginDto.cs",
+              "RelativeToolTip": "DTOs\\Auth\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:29:41.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T12:52:00.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CoworkingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\CoworkingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoworkingsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\CoworkingsController.cs",
+              "RelativeToolTip": "Controllers\\CoworkingsController.cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAswB4BAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:26:39.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:26:29.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T16:30:29.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "OrganizationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\OrganizationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrganizationsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\OrganizationsController.cs",
+              "RelativeToolTip": "Controllers\\OrganizationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T14:58:27.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "StatsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\StatsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StatsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\Controllers\\StatsController.cs",
+              "RelativeToolTip": "Controllers\\StatsController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T13:26:34.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PaginatedResult.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\PaginatedResult.cs",
+              "RelativeDocumentMoniker": "DTOs\\PaginatedResult.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\Desktop\\coworking_proj\\CoworkingApi\\DTOs\\PaginatedResult.cs",
+              "RelativeToolTip": "DTOs\\PaginatedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T11:46:39.447Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

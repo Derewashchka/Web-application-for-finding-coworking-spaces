@@ -1,0 +1,15 @@
+# Frontend (React Vite)
+coworking-client/node_modules/
+coworking-client/dist/
+coworking-client/.env
+coworking-client/.env.*
+!coworking-client/.env.example
+
+# Backend (ASP.NET)
+CoworkingApi/bin/
+CoworkingApi/obj/
+CoworkingApi/appsettings.Development.json
+
+# OS system files
+.DS_Store
+Thumbs.db
