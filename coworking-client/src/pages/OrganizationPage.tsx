@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getOrganization } from '../api/organizations'
 import CoworkingCard from '../components/coworkings/CoworkingCard'
 import Spinner from '../components/ui/Spinner'
