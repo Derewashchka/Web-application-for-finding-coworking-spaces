@@ -227,18 +227,6 @@ export default function ProfilePage() {
     } catch { toast.error('Помилка скасування') }
   }
 
-  const handleConfirm = async (id: number) => {
-    try {
-      await confirmBooking(id)
-      setBookings(prev =>
-        prev.map(b =>
-          b.id === id ? { ...b, status: 'confirmed' as const } : b
-        )
-      )
-      toast.success('Бронювання підтверджено')
-    } catch { toast.error('Помилка') }
-  }
-
   const handleRebook = (b: Booking) => {
     const dateFrom = new Date(b.dateFrom)
     const dateTo   = new Date(b.dateTo)
