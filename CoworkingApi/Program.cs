@@ -49,7 +49,7 @@ builder.Services.AddSingleton<IEncryptionService, EncryptionService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins("https://web-application-for-finding-coworki-one.vercel.app/")
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
@@ -63,7 +63,7 @@ builder.Services.AddControllers()
             System.Text.Json.JsonNamingPolicy.CamelCase;
     });
 
-// --- Swagger ç JWT ---
+// --- Swagger Ã§ JWT ---
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -75,7 +75,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Ââåä³òü: Bearer {token}"
+        Description = "Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼: Bearer {token}"
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
