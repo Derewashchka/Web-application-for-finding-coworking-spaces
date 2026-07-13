@@ -5,7 +5,6 @@ import {
   getBookingsForMyCoworkings
 } from '../api/bookings'
 import { getMyCoworkings } from '../api/coworkings'
-import { getMe } from '../api/users'
 import { getMyOrganization } from '../api/organizations'
 import { useAuthStore } from '../store/authStore'
 import Badge from '../components/ui/Badge'
@@ -21,15 +20,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import {
   LogOut, Calendar, MapPin, Clock, CreditCard,
   Plus, Building2, CheckCircle, Pencil, Eye,
-  RotateCcw, QrCode, Search,
+  RotateCcw, Search,
   ChevronLeft, ChevronRight, Globe
 } from 'lucide-react'
 import BookingQR from '../components/bookings/BookingQR'
 import EditProfileModal from '../components/profile/EditProfileModal'
 import OrganizationModal from '../components/organization/OrganizationModal'
 import PremiumCard       from '../components/organization/PremiumCard'
-
-// ─── Константи ───────────────────────────────────────────────
 
 const BOOKINGS_PER_PAGE   = 5
 const COWORKINGS_PER_PAGE = 6
@@ -39,8 +36,6 @@ const statusMap = {
   pending:   { label: 'Очікує',       variant: 'yellow' as const },
   cancelled: { label: 'Скасовано',    variant: 'red'    as const },
 }
-
-// ─── Хук пагінації ───────────────────────────────────────────
 
 function usePagination<T>(items: T[], perPage: number) {
   const [page, setPage] = useState(1)
@@ -54,7 +49,7 @@ function usePagination<T>(items: T[], perPage: number) {
   return { page, setPage, totalPages, paginated }
 }
 
-// ─── Компонент пагінації ─────────────────────────────────────
+// ─── Pagination component ─────────────────────────────────────
 
 function Pagination({
   page, totalPages, onChange
@@ -116,7 +111,7 @@ function Pagination({
   )
 }
 
-// ─── Компонент пошуку ─────────────────────────────────────────
+// ─── Search component ─────────────────────────────────────────
 
 function SearchInput({
   value, onChange, placeholder
@@ -144,7 +139,7 @@ function SearchInput({
   )
 }
 
-// ─── Головний компонент ───────────────────────────────────────
+// ─── Main component ───────────────────────────────────────
 
 export default function ProfilePage() {
   const { user, logout } = useAuthStore()
@@ -155,19 +150,19 @@ export default function ProfilePage() {
   const [loadingB,   setLoadingB]   = useState(true)
   const [loadingC,   setLoadingC]   = useState(true)
   
-  // Стейт для модалки редагування профілю
+  // State for the profile edit modal
   const [editOpen, setEditOpen] = useState(false)
 
-  // Стан для організації
+  // Status for the organization
   const [org,      setOrg]      = useState<any>(null)
   const [loadOrg, setLoadOrg] = useState(true)
   const [orgOpen, setOrgOpen] = useState(false)
 
-  // Пошук
+  // Search
   const [bookingSearch,   setBookingSearch]   = useState('')
   const [coworkingSearch, setCoworkingSearch] = useState('')
 
-  // Завантаження бронювань (client)
+  // Loading reservations (client)
   useEffect(() => {
     if (user?.role !== 'client') { setLoadingB(false); return }
     getMyBookings()
@@ -175,7 +170,7 @@ export default function ProfilePage() {
       .finally(() => setLoadingB(false))
   }, [user?.role])
 
-  // Завантаження коворкінгів (owner/admin)
+  // Coworking space uploads (owner/admin)
   useEffect(() => {
     if (user?.role !== 'owner' && user?.role !== 'admin') {
       setLoadingC(false); return
@@ -185,7 +180,7 @@ export default function ProfilePage() {
       .finally(() => setLoadingC(false))
   }, [user?.role])
 
-  // Завантаження організації
+  // Loading the organization
   useEffect(() => {
     if (user?.role !== 'owner') { setLoadOrg(false); return }
     getMyOrganization()
@@ -194,7 +189,7 @@ export default function ProfilePage() {
       .finally(() => setLoadOrg(false))
   }, [user?.role])
 
-  // ── Фільтровані списки ──────────────────────────────────────
+  // ── Filtered lists ──────────────────────────────────────
 
   const filteredBookings = useMemo(() =>
     bookings.filter(b =>
@@ -210,7 +205,7 @@ export default function ProfilePage() {
         .includes(coworkingSearch.toLowerCase())
     ), [coworkings, coworkingSearch])
 
-  // ── Пагінація ───────────────────────────────────────────────
+  // ── Pagination ───────────────────────────────────────────────
 
   const bookingPag   = usePagination(filteredBookings,   BOOKINGS_PER_PAGE)
   const coworkingPag = usePagination(filteredCoworkings, COWORKINGS_PER_PAGE)
@@ -218,8 +213,6 @@ export default function ProfilePage() {
   // ── Handlers ────────────────────────────────────────────────
 
   const handleProfileSaved = () => {
-    // Дані вже оновлені в store через setToken/updateUser
-    // Нічого більше не потрібно
   }
 
   const handleCancel = async (id: number) => {
@@ -275,9 +268,7 @@ export default function ProfilePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8 flex flex-col gap-6 bg-white dark:bg-gray-950 min-h-screen">
 
-      {/* ══════════════════════════════
-          Картка профілю
-      ══════════════════════════════ */}
+      {/* Profile card */}
       <Card padding="md">
         <CardHeader
           action={
@@ -317,7 +308,7 @@ export default function ProfilePage() {
             : 'Адміністратор'}
         </Badge>
 
-        {/* Статистика для client */}
+        {/* Statistics for client */}
         {user?.role === 'client' && (
           <div className="grid grid-cols-3 gap-3 mt-4 pt-4
             border-t border-gray-50 dark:border-gray-800/50">
@@ -336,7 +327,7 @@ export default function ProfilePage() {
           </div>
         )}
 
-        {/* Кнопки для owner */}
+        {/* Buttons for owner */}
         {user?.role === 'owner' && (
           <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-50 dark:border-gray-800/50">
             <Link to="/add-coworking">
@@ -348,9 +339,7 @@ export default function ProfilePage() {
         )}
       </Card>
 
-      {/* ══════════════════════════════
-          Організація (owner)
-      ══════════════════════════════ */}
+      {/* Organization (owner) */}
       {user?.role === 'owner' && (
         <div>
           <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-3
@@ -360,7 +349,6 @@ export default function ProfilePage() {
 
           {loadOrg ? <Spinner/> : !org ? (
 
-            /* Немає організації — пропонуємо створити */
             <Card padding="md">
               <div className="text-center py-4">
                 <Building2 size={28} className="mx-auto mb-2 text-gray-200 dark:text-gray-800"/>
@@ -378,7 +366,6 @@ export default function ProfilePage() {
 
           ) : (
 
-            /* Є організація */
             <div className="flex flex-col gap-3">
               <Card padding="md">
                 <CardHeader
@@ -437,7 +424,7 @@ export default function ProfilePage() {
                 </div>
               </Card>
 
-              {/* Преміум блок */}
+              {/* Premium block */}
               <PremiumCard
                 isPremium={org.isPremiumActive}
                 premiumUntil={org.premiumUntil}
@@ -450,7 +437,6 @@ export default function ProfilePage() {
             </div>
           )}
 
-          {/* Модалка організації */}
           {orgOpen && (
             <OrganizationModal
               existing={org}
@@ -461,9 +447,7 @@ export default function ProfilePage() {
         </div>
       )}
 
-      {/* ══════════════════════════════
-          Мої коворкінги (owner/admin)
-      ══════════════════════════════ */}
+      {/* My coworking spaces (owner/admin) */}
       {(user?.role === 'owner' || user?.role === 'admin') && (
         <div>
           <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-3
@@ -474,7 +458,7 @@ export default function ProfilePage() {
             </span>
           </h2>
 
-          {/* Пошук по коворкінгах */}
+          {/* Search for coworking spaces */}
           <div className="mb-3">
             <SearchInput
               value={coworkingSearch}
@@ -556,9 +540,7 @@ export default function ProfilePage() {
         </div>
       )}
 
-      {/* ══════════════════════════════
-          Мої бронювання (client)
-      ══════════════════════════════ */}
+      {/* My bookings (client) */}
       {user?.role === 'client' && (
         <div>
           <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-3
@@ -569,7 +551,7 @@ export default function ProfilePage() {
             </span>
           </h2>
 
-          {/* Пошук по бронюваннях */}
+          {/* Search by bookings */}
           <div className="mb-3">
             <SearchInput
               value={bookingSearch}
@@ -676,14 +658,10 @@ export default function ProfilePage() {
         </div>
       )}
 
-      {/* ══════════════════════════════
-          Бронювання клієнтів (owner)
-      ══════════════════════════════ */}
       {user?.role === 'owner' && (
         <OwnerBookings/>
       )}
 
-      {/* Модальне вікно редагування профілю */}
       {editOpen && (
         <EditProfileModal
           onClose={() => setEditOpen(false)}
@@ -694,7 +672,7 @@ export default function ProfilePage() {
   )
 }
 
-// ─── Бронювання клієнтів для owner ───────────────────────────
+// ─── Booking customers for owner ───────────────────────────
 
 function OwnerBookings() {
   const [bookings, setBookings] = useState<any[]>([])

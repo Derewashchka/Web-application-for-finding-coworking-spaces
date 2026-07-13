@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Топ-3 тижня ── */}
+      {/* ── Top 3 of the week ── */}
       <section className="border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-4 py-14">
           <div className="flex items-center gap-2 mb-2">
@@ -77,7 +77,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {top.map((cw, i) => (
                 <div key={cw.id} className="relative">
-                  {/* Медаль */}
+                  {/* Medal */}
                   <div className={`absolute -top-2 -left-2 z-10 w-7 h-7 rounded-full
                     flex items-center justify-center text-xs font-bold shadow-sm border-2 border-white dark:border-gray-900
                     ${i === 0 ? 'bg-amber-400 text-white'

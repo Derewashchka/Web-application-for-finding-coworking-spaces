@@ -79,7 +79,7 @@ export default function AuditPage() {
         </div>
       </div>
 
-      {/* ── Фільтри ── */}
+      {/* ── Filters ── */}
       <Card padding="md" className="mb-6">
         <div className="flex gap-3 flex-wrap">
           <div className="relative flex-1 min-w-48">
@@ -122,7 +122,7 @@ export default function AuditPage() {
         </div>
       </Card>
 
-      {/* ── Таблиця ── */}
+      {/* ── Table ── */}
       {loading ? <Spinner/> : logs.length === 0 ? (
         <div className="text-center py-12 text-gray-400 dark:text-gray-500">
           Жодної події не знайдено
@@ -173,7 +173,7 @@ export default function AuditPage() {
             </table>
           </Card>
 
-          {/* ── Пагінація ── */}
+          {/* ── Pagination ── */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-2 mt-6">
               <button

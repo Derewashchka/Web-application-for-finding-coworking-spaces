@@ -134,7 +134,7 @@ export default function DateTimePicker({
           </div>
 
           {step === 'day' ? (
-            /* ── Вибір дня ── */
+            /* ── Day selection ── */
             <div className="p-2">
               <style>{`
                 .rdp { --rdp-accent-color: #111827; --rdp-background-color: #f3f4f6; margin: 0; }
@@ -158,7 +158,7 @@ export default function DateTimePicker({
               />
             </div>
           ) : (
-            /* ── Вибір часу ── */
+            /* ── Time selection ── */
             <div className="p-3">
               <p className="text-xs text-gray-400 dark:text-gray-500 mb-2 px-1">
                 Оберіть час (08:00 – 22:00)

@@ -50,7 +50,7 @@ export default function PremiumCard({ isPremium, premiumUntil, onUpgraded }: Pro
         : 'border-gray-200 dark:border-gray-700'
     }`}>
 
-      {/* Шапка */}
+      {/* Cap */}
       <div className={`flex items-center justify-between px-4 py-3 ${
         isPremium
           ? 'bg-amber-50 dark:bg-amber-900/30 border-b border-amber-200 dark:border-amber-700'
@@ -69,10 +69,10 @@ export default function PremiumCard({ isPremium, premiumUntil, onUpgraded }: Pro
         )}
       </div>
 
-      {/* Картки планів */}
+      {/* Plan cards */}
       <div className="p-4 bg-white dark:bg-gray-900 grid grid-cols-1 md:grid-cols-2 gap-3">
 
-        {/* Базовий */}
+        {/* Basic */}
         <div className={`p-4 rounded-xl border ${
           !isPremium
             ? 'border-gray-900 dark:border-gray-500 bg-gray-50 dark:bg-gray-800'
@@ -91,7 +91,7 @@ export default function PremiumCard({ isPremium, premiumUntil, onUpgraded }: Pro
           </ul>
         </div>
 
-        {/* Преміум */}
+        {/* Premium */}
         <div className={`p-4 rounded-xl border ${
           isPremium
             ? 'border-amber-400 dark:border-amber-500 bg-amber-50 dark:bg-amber-900/20'
@@ -111,7 +111,7 @@ export default function PremiumCard({ isPremium, premiumUntil, onUpgraded }: Pro
         </div>
       </div>
 
-      {/* Кнопка апгрейду */}
+      {/* Upgrade button */}
       {!isPremium && (
         <div className="px-4 pb-4 bg-white dark:bg-gray-900">
           <Button

@@ -33,7 +33,7 @@ export default function AvailabilityCalendar({
   const [loadingMonth, setLoadingMonth] = useState(false)
   const [loadingDay,   setLoadingDay]   = useState(false)
 
-  // Завантаження зайнятості по місяцю
+  // Loading employment by month
   useEffect(() => {
     const load = async () => {
       setLoadingMonth(true)
@@ -53,7 +53,7 @@ export default function AvailabilityCalendar({
     load()
   }, [current, coworkingId])
 
-  // Завантаження слотів конкретного дня
+  // Loading slots for a specific day
   const loadDay = async (date: Date) => {
     setLoadingDay(true)
     setSelected(date)
@@ -72,7 +72,7 @@ export default function AvailabilityCalendar({
     }
   }
 
-  // Дні для відображення в сітці
+  // Days to display in the grid
   const monthStart = startOfMonth(current)
   const monthEnd   = endOfMonth(current)
   const gridStart  = startOfWeek(monthStart, { weekStartsOn: 1 })
@@ -95,7 +95,7 @@ export default function AvailabilityCalendar({
 
   return (
     <div className="border border-gray-100 dark:border-gray-800 rounded-xl overflow-hidden bg-white dark:bg-gray-900">
-      {/* ── Заголовок ── */}
+      {/* ── Title ── */}
       <div className="flex items-center justify-between px-4 py-3
         border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
         <button
@@ -115,9 +115,9 @@ export default function AvailabilityCalendar({
         </button>
       </div>
 
-      {/* ── Сітка днів ── */}
+      {/* ── Grid of days ── */}
       <div className="p-3">
-        {/* Назви днів */}
+        {/* Names of days */}
         <div className="grid grid-cols-7 mb-1">
           {WEEK_DAYS.map(d => (
             <div key={d}
@@ -127,7 +127,7 @@ export default function AvailabilityCalendar({
           ))}
         </div>
 
-        {/* Дні */}
+        {/* Days */}
         <div className="grid grid-cols-7 gap-0.5 relative">
           {loadingMonth && (
             <div className="absolute inset-0 z-10 bg-white/50 dark:bg-gray-900/50 flex items-center justify-center">
@@ -169,7 +169,7 @@ export default function AvailabilityCalendar({
           })}
         </div>
 
-        {/* Легенда */}
+        {/* Legend */}
         <div className="flex items-center gap-3 mt-3 pt-3 border-t border-gray-50 dark:border-gray-800/50">
           {[
             { color: 'bg-green-400', label: 'Є місця' },
@@ -184,7 +184,7 @@ export default function AvailabilityCalendar({
         </div>
       </div>
 
-      {/* ── Слоти годин вибраного дня ── */}
+      {/* ── Time slots of the selected day ── */}
       {selected && (
         <div className="border-t border-gray-100 dark:border-gray-800 px-4 py-3">
           <p className="text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">

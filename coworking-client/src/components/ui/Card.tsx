@@ -40,12 +40,12 @@ export default function Card({
   )
 }
 
-// ─── Підкомпоненти ───────────────────────────────────────────
+// ─── Subcomponents ───────────────────────────────────────────
 
 interface CardHeaderProps {
   children: ReactNode
   className?: string
-  action?: ReactNode  // кнопка або badge у правому куті
+  action?: ReactNode
 }
 
 export function CardHeader({ children, className, action }: CardHeaderProps) {

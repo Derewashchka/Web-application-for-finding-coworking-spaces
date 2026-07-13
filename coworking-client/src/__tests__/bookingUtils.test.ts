@@ -3,7 +3,7 @@ import { toLocalISOString } from '../api/bookings'
 
 describe('toLocalISOString', () => {
   it('повертає рядок у форматі YYYY-MM-DDTHH:MM:SS', () => {
-    const date = new Date(2026, 3, 15, 10, 30, 0) // 15 квіт 2026 10:30
+    const date = new Date(2026, 3, 15, 10, 30, 0) // 15 apr 2026 10:30
     const result = toLocalISOString(date)
     expect(result).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/)
   })
@@ -27,7 +27,7 @@ describe('toLocalISOString', () => {
   })
 
   it('двозначне відображення місяця (01–12)', () => {
-    const date = new Date(2026, 0, 5, 9, 0, 0) // Січень = 0
+    const date = new Date(2026, 0, 5, 9, 0, 0)
     const result = toLocalISOString(date)
     expect(result).toMatch(/^2026-01-05/)
   })
@@ -45,7 +45,7 @@ describe('toLocalISOString', () => {
   })
 })
 
-// ── Валідація бізнес-правил бронювання ─────────────────────
+// ── Validation of booking business rules ─────────────────────
 
 describe('Бізнес-правила бронювання (граничні випадки)', () => {
   it('час початку 08:00 є мінімально допустимим', () => {

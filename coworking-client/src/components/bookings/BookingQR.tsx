@@ -12,7 +12,7 @@ interface Props {
 export default function BookingQR({ booking }: Props) {
   const [open, setOpen] = useState(false)
 
-  // Дані які кодуємо в QR
+  // Data that encode in QR
   const qrData = JSON.stringify({
     id:       booking.id,
     coworking: booking.coworking.name,
@@ -47,7 +47,7 @@ export default function BookingQR({ booking }: Props) {
         <QrCode size={11}/> QR-код
       </button>
 
-      {/* Модальне вікно */}
+      {/* Modal window */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 z-50 flex items-center
@@ -59,7 +59,7 @@ export default function BookingQR({ booking }: Props) {
               flex flex-col items-center gap-4 shadow-xl"
             onClick={e => e.stopPropagation()}
           >
-            {/* Шапка */}
+            {/* Cap */}
             <div className="flex items-center justify-between w-full">
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -89,7 +89,7 @@ export default function BookingQR({ booking }: Props) {
               />
             </div>
 
-            {/* Деталі бронювання */}
+            {/* Booking details */}
             <div className="w-full bg-gray-50 dark:bg-gray-800 rounded-xl p-3 text-xs
               flex flex-col gap-1.5">
               <div className="flex justify-between">
@@ -120,7 +120,7 @@ export default function BookingQR({ booking }: Props) {
               </div>
             </div>
 
-            {/* Кнопка завантаження */}
+            {/* Download button */}
             <button
               onClick={handleDownload}
               className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400

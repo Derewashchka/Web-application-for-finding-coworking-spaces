@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-// Утиліта пагінації (логіка з ProfilePage usePagination hook)
+// Pagination utility
 function paginate<T>(items: T[], page: number, perPage: number) {
   const totalPages = Math.max(1, Math.ceil(items.length / perPage))
   const safePage   = Math.min(Math.max(1, page), totalPages)
@@ -23,7 +23,6 @@ describe('pagination utility', () => {
   })
 
   it('остання сторінка може бути неповною', () => {
-    // 23 елементи / 5 = 5 повних + 3 залишок
     const { paginated } = paginate(items, 5, 5)
     expect(paginated).toHaveLength(3)
   })

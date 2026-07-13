@@ -144,7 +144,7 @@ export default function EditCoworkingPage() {
             </div>
           </div>
 
-          {/* Карта для вибору координат */}
+          {/* Map for selecting coordinates */}
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">Розташування на карті</label>
             <LocationPicker
@@ -155,7 +155,7 @@ export default function EditCoworkingPage() {
                 setValue('longitude', lng)
               }}
             />
-            {/* Приховані поля для React Hook Form */}
+            {/* Hidden fields for React Hook Form */}
             <input type="hidden" {...register('latitude')} />
             <input type="hidden" {...register('longitude')} />
           </div>

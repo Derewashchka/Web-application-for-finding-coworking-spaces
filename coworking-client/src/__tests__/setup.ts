@@ -1,4 +1,3 @@
-// Мокуємо localStorage для всіх тестів
 import { vi } from 'vitest'
 
 const localStorageMock = (() => {
@@ -15,7 +14,6 @@ Object.defineProperty(window, 'localStorage', {
   value: localStorageMock,
 })
 
-// Мокуємо matchMedia (використовується в themeStore)
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: vi.fn().mockImplementation(query => ({
@@ -26,7 +24,6 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 })
 
-// Мокуємо document.documentElement.classList
 const classList = new Set<string>()
 Object.defineProperty(document.documentElement, 'classList', {
   value: {

@@ -40,7 +40,7 @@ export default function ComparePage() {
   const hasAmenity = (cw: Coworking, a: string) =>
     cw.amenities?.split(',').map(s => s.trim()).includes(a) ?? false
 
-  // Знаходимо найкращі значення для підсвічування
+  // Finding the best values ​​for backlighting
   const minPrice  = Math.min(...coworkings.map(c => c.pricePerHour))
   const maxRating = Math.max(...coworkings.map(c => c.rating))
   const maxSeats  = Math.max(...coworkings.map(c => c.totalSeats))
@@ -65,7 +65,6 @@ export default function ComparePage() {
         <table className="w-full border-collapse">
           <thead>
             <tr>
-              {/* Порожня перша колонка */}
               <td className="w-36 pb-4"/>
 
               {coworkings.map(cw => (
@@ -109,7 +108,7 @@ export default function ComparePage() {
           </thead>
 
           <tbody>
-            {/* ── Ціна ── */}
+            {/* ── Price ── */}
             <CompareRow label="Ціна / год">
               {coworkings.map(cw => (
                 <td key={cw.id} className={`px-3 py-3 text-center text-sm
@@ -126,7 +125,7 @@ export default function ComparePage() {
               ))}
             </CompareRow>
 
-            {/* ── Рейтинг ── */}
+            {/* ── Rating ── */}
             <CompareRow label="Рейтинг">
               {coworkings.map(cw => (
                 <td key={cw.id} className="px-3 py-3 text-center
@@ -152,7 +151,7 @@ export default function ComparePage() {
               ))}
             </CompareRow>
 
-            {/* ── Місткість ── */}
+            {/* ── Capacity ── */}
             <CompareRow label="Місця">
               {coworkings.map(cw => (
                 <td key={cw.id} className={`px-3 py-3 text-center text-sm
@@ -168,7 +167,7 @@ export default function ComparePage() {
               ))}
             </CompareRow>
 
-            {/* ── Зручності ── */}
+            {/* ── Amenities ── */}
             <CompareRow label="Зручності" header/>
             {ALL_AMENITIES.map(amenity => (
               <CompareRow key={amenity} label={amenity} indent>
@@ -185,7 +184,7 @@ export default function ComparePage() {
               </CompareRow>
             ))}
 
-            {/* ── Кнопки ── */}
+            {/* ── Buttons ── */}
             <tr>
               <td className="pt-4"/>
               {coworkings.map(cw => (
@@ -205,7 +204,7 @@ export default function ComparePage() {
   )
 }
 
-// ── Допоміжний компонент рядка ────────────────────────────────
+// ── Auxiliary line component ────────────────────────────────
 
 function CompareRow({
   label, children, header = false, indent = false

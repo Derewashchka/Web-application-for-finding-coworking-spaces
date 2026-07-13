@@ -17,7 +17,7 @@ export default function CompareBar() {
       bg-white dark:bg-gray-900
       backdrop-blur-sm">
 
-      {/* Іконка + підпис */}
+      {/* Icon + signature */}
       <div className="flex items-center gap-2 shrink-0">
         <GitCompareArrows size={15}
           className="text-gray-500 dark:text-gray-400"/>
@@ -30,7 +30,7 @@ export default function CompareBar() {
         </span>
       </div>
 
-      {/* Слоти */}
+      {/* Slots */}
       <div className="flex gap-1.5">
         {[0, 1, 2].map(i => (
           <div
@@ -57,7 +57,7 @@ export default function CompareBar() {
         ))}
       </div>
 
-      {/* Дії */}
+      {/* Actions */}
       <div className="flex items-center gap-2 pl-1
         border-l border-gray-100 dark:border-gray-700">
         <button

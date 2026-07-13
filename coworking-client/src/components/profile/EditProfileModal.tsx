@@ -82,7 +82,7 @@ export default function EditProfileModal({ onClose, onSaved }: Props) {
         className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-md p-6"
         onClick={e => e.stopPropagation()}
       >
-        {/* Шапка */}
+        {/* Cap */}
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-base font-semibold text-gray-900 dark:text-white">
             Редагування профілю
@@ -95,7 +95,6 @@ export default function EditProfileModal({ onClose, onSaved }: Props) {
           </button>
         </div>
 
-        {/* Таби */}
         <div className="flex gap-1 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg mb-5">
           {[
             { key: 'info'     as const, icon: User, label: 'Особисті дані' },

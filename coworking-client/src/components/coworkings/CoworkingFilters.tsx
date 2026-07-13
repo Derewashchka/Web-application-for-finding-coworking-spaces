@@ -34,7 +34,7 @@ export default function CoworkingFilters({ onFilter }: Props) {
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Рядок пошуку */}
+      {/* Search bar */}
       <div className="flex gap-2">
         <div className="relative flex-1">
           <Search size={14} className="absolute left-3 top-1/2
@@ -60,7 +60,7 @@ export default function CoworkingFilters({ onFilter }: Props) {
         <Button size="md" onClick={apply}>Знайти</Button>
       </div>
 
-      {/* Розширені фільтри */}
+      {/* Advanced filters */}
       {open && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 p-4
           border border-gray-100 dark:border-gray-700

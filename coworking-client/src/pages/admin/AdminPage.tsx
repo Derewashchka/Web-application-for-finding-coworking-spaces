@@ -10,15 +10,12 @@ import Spinner from '../../components/ui/Spinner'
 import Card, { CardHeader, CardTitle, CardDescription, CardFooter } from '../../components/ui/Card'
 import toast from 'react-hot-toast'
 import {
-  CheckCircle, Trash2, MapPin,
-  Calendar, Users, Clock, CreditCard,
+  CheckCircle, Trash2, MapPin, Users, Clock, CreditCard,
   ChevronLeft, ChevronRight, Shield, Search
 } from 'lucide-react'
 import { format } from 'date-fns'
 import { uk } from 'date-fns/locale'
 import { Link } from 'react-router-dom'
-
-// ─── Типи ────────────────────────────────────────────────────
 
 interface BookingAdmin {
   id:         number
@@ -39,7 +36,7 @@ const statusMap = {
   cancelled: { label: 'Скасовано',    variant: 'red'    as const },
 }
 
-// ─── Компонент пагінації ─────────────────────────────────────
+// ─── Pagination component ─────────────────────────────────────
 
 function Pagination({
   page, totalPages, onChange
@@ -107,7 +104,7 @@ function Pagination({
 
 const PER_PAGE = 10
 
-// ─── Головний компонент ───────────────────────────────────────
+// ─── Main component ───────────────────────────────────────
 
 export default function AdminPage() {
   const [tab,        setTab]        = useState<Tab>('coworkings')
@@ -115,14 +112,14 @@ export default function AdminPage() {
   const [bookings,   setBookings]   = useState<BookingAdmin[]>([])
   const [loading,    setLoading]    = useState(true)
 
-  // Пошук
+  // Search
   const [cwSearch,    setCwSearch]    = useState('')
   const [bookSearch,  setBookSearch]  = useState('')
   const [bookStatus,  setBookStatus]  = useState<
     'all'|'pending'|'confirmed'|'cancelled'
   >('all')
 
-  // Пагінація
+  // Pagination
   const [cwPage,   setCwPage]   = useState(1)
   const [bookPage, setBookPage] = useState(1)
 
@@ -144,7 +141,7 @@ export default function AdminPage() {
     load()
   }, [tab])
 
-  // ── Фільтровані коворкінги ──────────────────────────────────
+  // ── Filtered coworking spaces ──────────────────────────────────
   const filteredCw = useMemo(() =>
     coworkings.filter(c =>
       c.name.toLowerCase().includes(cwSearch.toLowerCase()) ||
@@ -156,7 +153,7 @@ export default function AdminPage() {
     (cwPage - 1) * PER_PAGE, cwPage * PER_PAGE
   )
 
-  // ── Фільтровані бронювання ──────────────────────────────────
+  // ── Filtered bookings ──────────────────────────────────
   const filteredBook = useMemo(() => {
     let list = bookStatus === 'all'
       ? bookings
@@ -233,7 +230,7 @@ export default function AdminPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
 
-      {/* ── Шапка ── */}
+      {/* ── Cap ── */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -246,7 +243,7 @@ export default function AdminPage() {
           </p>
         </div>
 
-        {/* Кнопка журналу дій */}
+        {/* Action log button */}
         <Link to="/audit">
           <Button variant="outline" size="sm">
             <Shield size={14}/> Журнал дій
@@ -254,7 +251,6 @@ export default function AdminPage() {
         </Link>
       </div>
 
-      {/* ── Таби ── */}
       <div className="flex gap-1 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg w-fit mb-6">
         {tabs.map(t => (
           <button key={t.key} onClick={() => setTab(t.key)}
@@ -275,7 +271,7 @@ export default function AdminPage() {
 
       {loading ? <Spinner/> : (
 
-        /* ════════ КОВОРКІНГИ ════════ */
+        /* ════════ Coworkings ════════ */
         tab === 'coworkings' ? (
           <div>
             {/* Пошук */}
@@ -369,9 +365,9 @@ export default function AdminPage() {
 
         ) : (
 
-          /* ════════ БРОНЮВАННЯ ════════ */
+          /* ════════ Booking ════════ */
           <div>
-            {/* Пошук + фільтр статусу */}
+            {/* Search + status filter */}
             <div className="flex gap-3 mb-4 flex-wrap">
               <div className="relative flex-1 min-w-48">
                 <Search size={13} className="absolute left-3 top-1/2

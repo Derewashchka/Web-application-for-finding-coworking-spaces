@@ -21,7 +21,7 @@ export default function NotificationBell() {
   const [unread,        setUnread]        = useState(0)
   const ref = useRef<HTMLDivElement>(null)
 
-  // Закрити при кліку поза
+  // Close on click outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node))
@@ -31,7 +31,7 @@ export default function NotificationBell() {
     return () => document.removeEventListener('mousedown', handler)
   }, [])
 
-  // Завантажити кількість непрочитаних (polling кожні 30с)
+  // Load unread count
   useEffect(() => {
     const fetch = async () => {
       try {
@@ -82,7 +82,7 @@ export default function NotificationBell() {
 
   return (
     <div className="relative" ref={ref}>
-      {/* Кнопка дзвіночка */}
+      {/* Bell button */}
       <button
         onClick={handleOpen}
         className="relative p-1.5 rounded-lg text-gray-500 dark:text-gray-400
@@ -98,12 +98,12 @@ export default function NotificationBell() {
         )}
       </button>
 
-      {/* Дропдаун */}
+      {/* Dropdown */}
       {open && (
         <div className="absolute right-0 top-10 w-80 bg-white dark:bg-gray-900 border
           border-gray-100 dark:border-gray-800 rounded-xl shadow-lg z-50 overflow-hidden">
 
-          {/* Заголовок */}
+          {/* Title */}
           <div className="flex items-center justify-between px-4 py-3
             border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
             <span className="text-sm font-medium text-gray-900 dark:text-white">
@@ -125,7 +125,7 @@ export default function NotificationBell() {
             )}
           </div>
 
-          {/* Список */}
+          {/* List */}
           <div className="max-h-96 overflow-y-auto">
             {notifications.length === 0 ? (
               <div className="text-center py-10 text-gray-400 dark:text-gray-500">
@@ -142,7 +142,7 @@ export default function NotificationBell() {
                     !n.isRead && 'bg-blue-50/40 dark:bg-blue-900/10'
                   )}
                 >
-                  {/* Крапка типу */}
+                  {/* Type point */}
                   <div className="pt-1.5 shrink-0">
                     <div className={cn(
                       'w-2 h-2 rounded-full',
@@ -150,7 +150,7 @@ export default function NotificationBell() {
                     )}/>
                   </div>
 
-                  {/* Контент */}
+                  {/* Content */}
                   <div
                     className="flex-1 min-w-0 cursor-pointer"
                     onClick={() => !n.isRead && handleMarkRead(n.id)}
@@ -171,7 +171,7 @@ export default function NotificationBell() {
                     </p>
                   </div>
 
-                  {/* Видалити */}
+                  {/* Remove */}
                   <button
                     onClick={() => handleDelete(n.id, !n.isRead)}
                     className="shrink-0 p-1 rounded text-gray-300 dark:text-gray-600

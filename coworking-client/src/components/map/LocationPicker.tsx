@@ -4,7 +4,6 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { MapPin, Navigation } from 'lucide-react'
 
-// Фікс іконок Leaflet у Vite
 delete (L.Icon.Default.prototype as any)._getIconUrl
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -14,7 +13,6 @@ L.Icon.Default.mergeOptions({
 
 interface LatLng { lat: number; lng: number }
 
-// Компонент що слухає кліки по карті
 function ClickHandler({ onSelect }: { onSelect: (pos: LatLng) => void }) {
   useMapEvents({
     click(e) { onSelect({ lat: e.latlng.lat, lng: e.latlng.lng }) }
@@ -22,7 +20,6 @@ function ClickHandler({ onSelect }: { onSelect: (pos: LatLng) => void }) {
   return null
 }
 
-// Компонент що переміщує карту до позиції
 function FlyTo({ pos }: { pos: LatLng }) {
   const map = useMap()
   useEffect(() => {
@@ -41,7 +38,7 @@ export default function LocationPicker({ latitude, longitude, onChange }: Props)
   const hasCoords = latitude && longitude
   const defaultCenter: [number, number] = hasCoords
     ? [latitude!, longitude!]
-    : [48.3794, 31.1656] // центр України
+    : [48.3794, 31.1656]
 
   const [marker, setMarker] = useState<LatLng | null>(
     hasCoords ? { lat: latitude!, lng: longitude! } : null
@@ -109,7 +106,6 @@ export default function LocationPicker({ latitude, longitude, onChange }: Props)
           )}
         </MapContainer>
 
-        {/* Підказка */}
         {!marker && (
           <div className="absolute inset-0 pointer-events-none flex items-end
             justify-center pb-3 z-[400]">
@@ -121,7 +117,7 @@ export default function LocationPicker({ latitude, longitude, onChange }: Props)
         )}
       </div>
 
-      {/* Показ координат */}
+      {/* Show coordinates */}
       {marker && (
         <div className="flex gap-3 text-xs text-gray-500 dark:text-gray-400
           bg-gray-50 dark:bg-gray-800 px-3 py-2 rounded-lg">

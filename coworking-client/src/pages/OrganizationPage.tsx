@@ -7,7 +7,7 @@ import Badge from '../components/ui/Badge'
 import {
   MapPin, Globe, Building2, Phone, Mail,
   Clock, ExternalLink, MessageCircle,
-  Hash, Calendar, Star
+  Hash, Calendar
 } from 'lucide-react'
 import { 
   FaInstagram as Instagram, 
@@ -19,7 +19,6 @@ import type { Organization } from '../types'
 import { format } from 'date-fns'
 import { uk } from 'date-fns/locale'
 
-// Іконки і кольори для відомих типів контактів
 const CONTACT_META: Record<string, {
   icon: React.ElementType
   color: string
@@ -93,7 +92,6 @@ const CONTACT_META: Record<string, {
   },
 }
 
-// Мітки для відомих ключів
 const CONTACT_LABELS: Record<string, string> = {
   phone: 'Телефон', email: 'Email', website: 'Вебсайт',
   telegram: 'Telegram', instagram: 'Instagram', facebook: 'Facebook',
@@ -169,7 +167,6 @@ export default function OrganizationPage() {
     ? (org.coworkings.reduce((s, c) => s + (c.rating || 0), 0) / org.coworkings.length).toFixed(1)
     : null
 
-  // Сортуємо: спочатку відомі, потім кастомні
   const sortedContactKeys = Object.keys(contacts).sort((a, b) => {
     const ai = Object.keys(CONTACT_META).indexOf(a)
     const bi = Object.keys(CONTACT_META).indexOf(b)
@@ -182,7 +179,7 @@ export default function OrganizationPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
 
-      {/* ── Шапка ── */}
+      {/* ── Cap ── */}
       <div className="bg-white dark:bg-gray-900 border border-gray-100
         dark:border-gray-800 rounded-2xl p-6 mb-6">
         <div className="flex items-start gap-5 flex-wrap">
@@ -218,7 +215,7 @@ export default function OrganizationPage() {
             )}
           </div>
 
-          {/* Статистика */}
+          {/* Statistics */}
           <div className="flex gap-6 shrink-0 text-center">
             <div>
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -240,10 +237,10 @@ export default function OrganizationPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        {/* ── Ліва колонка ── */}
+        {/* ── Left column ── */}
         <div className="flex flex-col gap-4">
 
-          {/* Контакти */}
+          {/* Contacts */}
           <div className="bg-white dark:bg-gray-900 border border-gray-100
             dark:border-gray-800 rounded-2xl p-5">
             <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
@@ -263,7 +260,7 @@ export default function OrganizationPage() {
             )}
           </div>
 
-          {/* Дата */}
+          {/* Date */}
           <div className="bg-white dark:bg-gray-900 border border-gray-100
             dark:border-gray-800 rounded-2xl p-4">
             <div className="flex items-center gap-2 text-xs text-gray-400">
@@ -274,7 +271,7 @@ export default function OrganizationPage() {
           </div>
         </div>
 
-        {/* ── Права колонка — коворкінги ── */}
+        {/* ── Right column - coworking spaces ── */}
         <div className="lg:col-span-2">
           <h2 className="text-base font-semibold text-gray-900 dark:text-white
             mb-4 flex items-center gap-2">

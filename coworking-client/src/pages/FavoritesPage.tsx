@@ -22,7 +22,6 @@ export default function FavoritesPage() {
         return
       }
       try {
-        // Завантажуємо кожен збережений коворкінг окремо за id
         const results = await Promise.all(
           ids.map(id => api.get(`/coworkings/${id}`).then(r => r.data))
         )

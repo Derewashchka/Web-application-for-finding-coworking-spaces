@@ -21,8 +21,6 @@ import TimeOnlyPicker from '../components/ui/TimeOnlyPicker'
 import { format } from 'date-fns'
 import { uk } from 'date-fns/locale'
 
-// ─── Типи ────────────────────────────────────────────────────
-
 interface ReviewWithUser extends Review {
   userId?: number
 }
@@ -35,16 +33,12 @@ interface Availability {
   userAlreadyBooked: boolean
 }
 
-// ─── Іконки зручностей ───────────────────────────────────────
-
 const amenityIcons: Record<string, React.ReactNode> = {
   'WiFi':    <Wifi    size={14}/>,
   'Кава':    <Coffee  size={14}/>,
   'Принтер': <Printer size={14}/>,
   'Паркінг': <Car     size={14}/>,
 }
-
-// ─── Компонент одного відгуку ─────────────────────────────────
 
 interface ReviewItemProps {
   review:        ReviewWithUser
@@ -105,7 +99,7 @@ function ReviewItem({
   return (
     <div className="p-4 border border-gray-100 dark:border-gray-800 rounded-xl">
       {editing ? (
-        /* ── Режим редагування ── */
+        /* ── Edit mode ── */
         <div className="flex flex-col gap-3">
           <div className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -140,7 +134,7 @@ function ReviewItem({
           </div>
         </div>
       ) : (
-        /* ── Режим перегляду ── */
+        /* ── View mode ── */
         <div>
           <div className="flex items-start justify-between mb-2 gap-2">
             <div className="flex flex-wrap items-center gap-2">
@@ -161,7 +155,7 @@ function ReviewItem({
               </span>
             </div>
 
-            {/* Кнопки дій */}
+            {/* Action buttons */}
             <div className="flex gap-1 shrink-0">
               {canEdit && (
                 <button
@@ -198,35 +192,31 @@ function ReviewItem({
   )
 }
 
-// ─── Головний компонент ───────────────────────────────────────
+// ─── Main component ───────────────────────────────────────
 
 export default function CoworkingDetailPage() {
   const { id } = useParams<{ id: string }>()
   const { user, isAuthenticated } = useAuthStore()
 
-  // Дані
   const [cw,       setCw]      = useState<Coworking | null>(null)
   const [reviews, setReviews] = useState<ReviewWithUser[]>([])
   const [loading, setLoading] = useState(true)
 
-  // Організація
   const [orgInfo, setOrgInfo] = useState<{
     id: number; name: string; isPremiumActive: boolean
   } | null>(null)
 
-  // Бронювання
   const [dateFrom,       setDateFrom]      = useState<Date | null>(null)
   const [dateTo,         setDateTo]        = useState<Date | null>(null)
   const [booking,        setBooking]       = useState(false)
   const [availability,  setAvailability]  = useState<Availability | null>(null)
   const [checkingAvail, setCheckingAvail] = useState(false)
 
-  // Новий відгук
   const [rating,     setRating]     = useState(5)
   const [comment,    setComment]    = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  // ── Завантаження даних ──────────────────────────────────────
+  // ── Data loading ──────────────────────────────────────
 
   useEffect(() => {
     const load = async () => {
@@ -238,7 +228,6 @@ export default function CoworkingDetailPage() {
         setCw(cwRes.data)
         setReviews(revRes.data)
 
-        // Завантаження організації
         if (cwRes.data.organizationId) {
           try {
             const orgRes = await api.get(
@@ -252,7 +241,6 @@ export default function CoworkingDetailPage() {
           } catch {}
         }
 
-        // ── Повторне бронювання ──
         const rebook = sessionStorage.getItem('rebook')
         if (rebook) {
           const { dateFrom: df, dateTo: dt } = JSON.parse(rebook)
@@ -270,7 +258,7 @@ export default function CoworkingDetailPage() {
     load()
   }, [id])
 
-  // ── Перевірка доступності з debounce ───────────────────────
+  // ── Checking accessibility with debounce ───────────────────────
 
   useEffect(() => {
     if (!dateFrom || !dateTo || dateTo <= dateFrom) {
@@ -297,7 +285,7 @@ export default function CoworkingDetailPage() {
     return () => clearTimeout(timer)
   }, [dateFrom, dateTo, id])
 
-  // ── Бронювання ──────────────────────────────────────────────
+  // ── Booking ──────────────────────────────────────────────
 
   const handleBook = async () => {
     if (!dateFrom || !dateTo) return toast.error('Оберіть дату та час')
@@ -321,7 +309,7 @@ export default function CoworkingDetailPage() {
     }
   }
 
-  // ── Відгук ──────────────────────────────────────────────────
+  // ── Review ──────────────────────────────────────────────────
 
   const recalcRating = (updatedReviews: ReviewWithUser[]) => {
     if (!cw) return
@@ -362,7 +350,7 @@ export default function CoworkingDetailPage() {
     recalcRating(newReviews)
   }
 
-  // ── Рендер ──────────────────────────────────────────────────
+  // ── Render ──────────────────────────────────────────────────
 
   if (loading) return <Spinner/>
   if (!cw) return (
@@ -386,12 +374,10 @@ export default function CoworkingDetailPage() {
     <main className="max-w-5xl mx-auto px-4 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-        {/* ════════════════════════════════
-            Ліва колонка
-        ════════════════════════════════ */}
+        {/* Left column */}
         <div className="lg:col-span-2 flex flex-col gap-6">
 
-          {/* Фото */}
+          {/* Photo */}
           <div className="rounded-xl overflow-hidden h-64 bg-gray-50 dark:bg-gray-900">
             <img
               src={cw.photoUrl ||
@@ -401,7 +387,7 @@ export default function CoworkingDetailPage() {
             />
           </div>
 
-          {/* Заголовок */}
+          {/* Title */}
           <div className="flex items-start justify-between gap-4">
             <div>
               <h1 className="text-xl font-semibold text-gray-900 dark:text-white">{cw.name}</h1>
@@ -431,7 +417,7 @@ export default function CoworkingDetailPage() {
             </div>
           </div>
 
-          {/* Опис */}
+          {/* Description */}
           {cw.description && (
             <div>
               <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
@@ -443,7 +429,7 @@ export default function CoworkingDetailPage() {
             </div>
           )}
 
-          {/* Зручності */}
+          {/* Amenities */}
           {amenities.length > 0 && (
             <div>
               <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
@@ -483,7 +469,7 @@ export default function CoworkingDetailPage() {
             />
           </div>
 
-          {/* ── Відгуки ── */}
+          {/* ── Reviews ── */}
           <div>
             <h2 className="text-sm font-medium text-gray-900 dark:text-white mb-3
               flex items-center gap-2">
@@ -511,7 +497,7 @@ export default function CoworkingDetailPage() {
               </div>
             )}
 
-            {/* Форма нового відгуку або підказка */}
+            {/* New feedback form or tip */}
             {isAuthenticated() && user?.role === 'client' && (
               myReview ? (
                 <div className="mt-4 p-4 border border-amber-100 dark:border-amber-900/50
@@ -528,7 +514,6 @@ export default function CoworkingDetailPage() {
                     Залишити відгук
                   </h3>
 
-                  {/* Зірочки */}
                   <div className="flex gap-0.5 mb-3">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <button
@@ -573,14 +558,12 @@ export default function CoworkingDetailPage() {
           </div>
         </div>
 
-        {/* ════════════════════════════════
-            Права колонка — бронювання
-        ════════════════════════════════ */}
+        {/* Right column - reservations */}
         <div className="lg:col-span-1">
           <div className="sticky top-20 border border-gray-100 dark:border-gray-800
             bg-white dark:bg-gray-900 rounded-xl p-5 flex flex-col gap-4">
 
-            {/* Ціна */}
+            {/* Price */}
             <div>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -597,7 +580,7 @@ export default function CoworkingDetailPage() {
             {isAuthenticated() && user?.role === 'client' ? (
               <div className="flex flex-col gap-3">
 
-                {/* ── Дата і час початку ── */}
+                {/* ── Start date and time ── */}
                 <DateTimePicker
                   label="Дата та час початку"
                   value={dateFrom}
@@ -611,7 +594,7 @@ export default function CoworkingDetailPage() {
                   maxHour={22}
                 />
 
-                {/* ── Тільки час кінця ── */}
+                {/* ── End time ── */}
                 {dateFrom && (
                   <TimeOnlyPicker
                     label={`Час завершення (${format(dateFrom, 'dd MMMM', { locale: uk })})`}
@@ -626,7 +609,7 @@ export default function CoworkingDetailPage() {
                   />
                 )}
 
-                {/* Індикатор доступності */}
+                {/* Availability indicator */}
                 {dateFrom && dateTo && dateTo > dateFrom && (
                   <div>
                     {checkingAvail ? (
@@ -680,7 +663,7 @@ export default function CoworkingDetailPage() {
                   </div>
                 )}
 
-                {/* Розрахунок вартості */}
+                {/* Cost calculation */}
                 {hours > 0 && (
                   <div className="flex justify-between items-center text-sm
                     py-2.5 border-t border-gray-100 dark:border-gray-800">
@@ -693,7 +676,7 @@ export default function CoworkingDetailPage() {
                   </div>
                 )}
 
-                {/* Кнопка бронювання */}
+                {/* Booking button */}
                 <Button
                   loading={booking}
                   onClick={handleBook}

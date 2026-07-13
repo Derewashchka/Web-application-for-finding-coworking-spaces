@@ -22,7 +22,7 @@ export default function CoworkingCard({ cw }: { cw: Coworking }) {
         hover:border-gray-300 dark:hover:border-gray-600
         hover:shadow-sm transition-all duration-200 overflow-hidden">
 
-      {/* Фото */}
+      {/* Photo */}
       <div className="relative h-44 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <img
           src={cw.photoUrl || 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'}
@@ -30,11 +30,11 @@ export default function CoworkingCard({ cw }: { cw: Coworking }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         
-        {/* Кнопка "Серце" */}
+        {/* Heart button */}
         <div className="absolute top-2 left-2">
           <button
             onClick={(e) => {
-              e.preventDefault()  // щоб не переходило на сторінку
+              e.preventDefault()
               toggle(cw.id)
             }}
             className="w-7 h-7 rounded-lg bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm
@@ -50,7 +50,7 @@ export default function CoworkingCard({ cw }: { cw: Coworking }) {
           </button>
         </div>
 
-        {/* Рейтинг */}
+        {/* Rating */}
         <div className="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm
           rounded-lg px-2 py-1 flex items-center gap-1 text-xs font-medium text-gray-900 dark:text-white">
           <Star size={12} className="text-amber-400 fill-amber-400"/>
@@ -58,7 +58,7 @@ export default function CoworkingCard({ cw }: { cw: Coworking }) {
         </div>
       </div>
 
-      {/* Контент */}
+      {/* Content */}
       <div className="p-4 flex flex-col gap-2 flex-1">
         <div>
           <h3 className="font-medium text-gray-900 dark:text-white text-sm line-clamp-1">
@@ -83,7 +83,7 @@ export default function CoworkingCard({ cw }: { cw: Coworking }) {
               <Users size={11}/> {cw.totalSeats} місць
             </span>
             
-            {/* Кнопка "Порівняти" */}
+            {/* Compare button */}
             <button
               onClick={(e) => {
                 e.preventDefault()

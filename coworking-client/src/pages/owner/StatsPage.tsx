@@ -31,15 +31,14 @@ export default function StatsPage() {
   const [hours,     setHours]     = useState<any[]>([])
   const [loading,   setLoading]   = useState(true)
 
-  // Стан для перевірки преміум-плану організації
+  // Status to check the organization's premium plan
   const [org, setOrg] = useState<any>(null)
   const [checkingPlan, setCheckingPlan] = useState(true)
 
-  // Стан для темної теми (щоб графіки реагували на перемикання)
+  // Dark theme state
   const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'))
 
   useEffect(() => {
-    // Слухаємо зміни класу 'dark' на <html>
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.classList.contains('dark'))
     })
@@ -68,7 +67,7 @@ export default function StatsPage() {
         setWeekday(wd.data)
         setHours(hr.data)
       } catch {
-        // Ігноруємо помилки (наприклад 403), якщо користувач не має преміум
+
       } finally {
         setLoading(false)
       }
@@ -134,7 +133,6 @@ export default function StatsPage() {
     },
   ]
 
-  // Спільні стилі для Tooltip
   const tooltipStyle = {
     fontSize: 12, 
     borderRadius: 8,
@@ -152,7 +150,7 @@ export default function StatsPage() {
         </p>
       </div>
 
-      {/* ── Картки огляду ── */}
+      {/* ── Review cards ── */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {statCards.map(({ icon: Icon, label, value, sub, color, bg }) => (
           <Card key={label} padding="md">
@@ -167,7 +165,7 @@ export default function StatsPage() {
         ))}
       </div>
 
-      {/* ── Дохід по місяцях ── */}
+      {/* ── Income by month ── */}
       <Card padding="md">
         <div className="flex items-center gap-2 mb-4">
           <TrendingUp size={15} className="text-gray-500 dark:text-gray-400"/>
@@ -211,7 +209,7 @@ export default function StatsPage() {
       </Card>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* ── По днях тижня ── */}
+        {/* ── Income by day of the week ── */}
         <Card padding="md">
           <div className="flex items-center gap-2 mb-4">
             <Calendar size={15} className="text-gray-500 dark:text-gray-400"/>
@@ -245,7 +243,7 @@ export default function StatsPage() {
           )}
         </Card>
 
-        {/* ── Популярні години ── */}
+        {/* ── Popular hours ── */}
         <Card padding="md">
           <div className="flex items-center gap-2 mb-4">
             <Users size={15} className="text-gray-500 dark:text-gray-400"/>

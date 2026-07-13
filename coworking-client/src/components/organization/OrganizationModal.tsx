@@ -7,7 +7,6 @@ import Button from '../ui/Button'
 import { X, Building2, Plus, Trash2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
-// Відомі типи контактів з іконками і плейсхолдерами
 const CONTACT_PRESETS = [
   { key: 'phone',     label: 'Телефон',    placeholder: '+380501234567' },
   { key: 'email',     label: 'Email',      placeholder: 'info@workhub.ua' },
@@ -52,7 +51,7 @@ export default function OrganizationModal({ existing, onClose, onSaved }: Props)
     }
   })
 
-  // Контакти як масив рядків {key, value}
+  // Contacts as a string array {key, value}
   const [contacts, setContacts] = useState<ContactRow[]>(() => {
     if (!existing?.contacts) return []
     return Object.entries(existing.contacts).map(([key, value]) => ({ key, value }))
@@ -171,13 +170,13 @@ export default function OrganizationModal({ existing, onClose, onSaved }: Props)
           <Input label="URL логотипу" placeholder="https://..."
             {...register('logoUrl')}/>
 
-          {/* ── Контактна інформація ── */}
+          {/* ── Contact information ── */}
           <div className="border-t border-gray-100 dark:border-gray-800 pt-4">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
               Контактна інформація
             </p>
 
-            {/* Додані контакти */}
+            {/* Added contacts */}
             {contacts.map((c, idx) => (
               <div key={c.key} className="flex gap-2 mb-2 items-center">
                 <div className="w-28 shrink-0">
@@ -205,7 +204,7 @@ export default function OrganizationModal({ existing, onClose, onSaved }: Props)
               </div>
             ))}
 
-            {/* Додати з пресетів */}
+            {/* Add from presets */}
             {unusedPresets.length > 0 && (
               <div className="mt-3">
                 <p className="text-xs text-gray-400 dark:text-gray-500 mb-2">
@@ -227,7 +226,7 @@ export default function OrganizationModal({ existing, onClose, onSaved }: Props)
               </div>
             )}
 
-            {/* Довільне поле */}
+            {/* Free field */}
             <div className="flex gap-2 mt-3">
               <input
                 value={customKey}

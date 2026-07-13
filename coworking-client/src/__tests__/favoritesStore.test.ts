@@ -48,8 +48,8 @@ describe('favoritesStore', () => {
 
   it('повторний toggle одного id не дублює його', () => {
     useFavoritesStore.getState().toggle(5)
-    useFavoritesStore.getState().toggle(5) // видаляємо
-    useFavoritesStore.getState().toggle(5) // знову додаємо
+    useFavoritesStore.getState().toggle(5)
+    useFavoritesStore.getState().toggle(5)
     expect(useFavoritesStore.getState().ids.filter(i => i === 5)).toHaveLength(1)
   })
 })

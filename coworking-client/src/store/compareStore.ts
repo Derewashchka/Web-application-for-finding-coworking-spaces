@@ -2,7 +2,7 @@ import { create } from 'zustand'
 
 interface CompareState {
   ids:       number[]
-  add:       (id: number) => boolean  // повертає false якщо вже 3
+  add:       (id: number) => boolean
   remove:    (id: number) => void
   clear:     () => void
   isInCompare: (id: number) => boolean

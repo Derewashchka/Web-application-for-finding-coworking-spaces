@@ -4,7 +4,6 @@ import { useThemeStore } from '../store/themeStore'
 describe('themeStore', () => {
   beforeEach(() => {
     localStorage.clear()
-    // Скидаємо до світлої теми
     useThemeStore.setState({ isDark: false })
     document.documentElement.classList.remove('dark')
   })

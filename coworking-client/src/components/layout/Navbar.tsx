@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
-  // Закрити дропдаун при кліку поза ним
+  // Close dropdown when clicked outside it
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node))
@@ -47,7 +47,7 @@ export default function Navbar() {
             Каталог
           </Link>
           
-          {/* Посилання на збережені */}
+          {/* Saved links */}
           <Link to="/favorites" className="relative hover:text-gray-900 dark:hover:text-white transition-colors">
             Збережені
             {ids.length > 0 && (
@@ -55,14 +55,14 @@ export default function Navbar() {
             )}
           </Link>
 
-          {/* Статистика для власника та адміна */}
+          {/* Statistics for the owner and admin */}
           {(user?.role === 'owner') && (
             <Link to="/stats" className="hover:text-gray-900 dark:hover:text-white transition-colors">
               Статистика
             </Link>
           )}
 
-          {/* Адмін-панель */}
+          {/* Admin panel */}
           {user?.role === 'admin' && (
             <Link to="/admin" className="hover:text-gray-900 dark:hover:text-white transition-colors">
               Адмін
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           
-          {/* Доданий дзвіночок сповіщень */}
+          {/* Notification bell */}
           {isAuthenticated() && <NotificationBell/>}
 
           <ThemeToggle/>
@@ -94,7 +94,7 @@ export default function Navbar() {
                   ${open ? 'rotate-180' : ''}`}/>
               </button>
               
-              {/* Дропдаун */}
+              {/* Dropdown */}
               {open && (
                 <div className="absolute right-0 top-10 w-52 bg-white dark:bg-gray-900
                   border border-gray-100 dark:border-gray-800

@@ -78,7 +78,7 @@ export default function AddCoworkingPage() {
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 mt-2">
 
-          {/* Основна інформація */}
+          {/* Basic information */}
           <div className="grid grid-cols-1 gap-4">
             <Input
               label="Назва коворкінгу *"
@@ -126,7 +126,7 @@ export default function AddCoworkingPage() {
             />
           </div>
 
-          {/* Опис */}
+          {/* Description */}
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">Опис</label>
             <textarea
@@ -138,14 +138,14 @@ export default function AddCoworkingPage() {
             />
           </div>
 
-          {/* Фото */}
+          {/* Photo */}
           <Input
             label="URL фотографії"
             placeholder="https://example.com/photo.jpg"
             {...register('photoUrl')}
           />
 
-          {/* Зручності */}
+          {/* Amenities */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-700">Зручності</label>
             <div className="flex flex-wrap gap-2">
@@ -169,7 +169,7 @@ export default function AddCoworkingPage() {
             </div>
           </div>
 
-          {/* Карта для вибору координат */}
+          {/* Map for selecting coordinates */}
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">Розташування на карті (необов'язково)</label>
             <LocationPicker
@@ -180,7 +180,6 @@ export default function AddCoworkingPage() {
                 setValue('longitude', lng)
               }}
             />
-            {/* Приховані поля для React Hook Form */}
             <input type="hidden" {...register('latitude')} />
             <input type="hidden" {...register('longitude')} />
           </div>
