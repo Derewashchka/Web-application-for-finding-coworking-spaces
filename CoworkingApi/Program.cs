@@ -103,11 +103,8 @@ var app = builder.Build();
 
 app.UseIpRateLimiting();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseCors("AllowReact");
 app.UseMiddleware<ExceptionMiddleware>();
