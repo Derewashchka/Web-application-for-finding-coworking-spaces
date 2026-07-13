@@ -1,4 +1,4 @@
-﻿using CoworkingApi.Models;
+using CoworkingApi.Models;
 using CoworkingApi.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,9 +27,16 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Organization>().ToTable("organizations");
+        modelBuilder.Entity<User>().ToTable("users");
+        modelBuilder.Entity<Coworking>().ToTable("coworkings");
+        modelBuilder.Entity<Booking>().ToTable("bookings");
+        modelBuilder.Entity<Review>().ToTable("reviews");
+        modelBuilder.Entity<Notification>().ToTable("notifications");
+        modelBuilder.Entity<AuditLog>().ToTable("auditlogs");
+
         var converter = new EncryptedStringConverter(_enc);
 
-        // ── Шифрування полів User ──────────────────────────────
         modelBuilder.Entity<User>(entity =>
         {
             entity.Property(u => u.FirstName)
@@ -46,10 +53,9 @@ public class AppDbContext : DbContext
 
             entity.HasIndex(u => u.Email)
                   .IsUnique()
-                  .HasFilter(null); // унікальність по зашифрованому значенню
+                  .HasFilter(null);
         });
 
-        // ── Інші конфігурації ──────────────────────────────────
         modelBuilder.Entity<Coworking>()
             .Property(c => c.PricePerHour).HasPrecision(10, 2);
 
