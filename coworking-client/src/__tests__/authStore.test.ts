@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { useAuthStore } from '../store/authStore'
 
 const MOCK_TOKEN =

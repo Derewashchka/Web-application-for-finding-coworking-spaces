@@ -20,7 +20,7 @@ const HOURS = Array.from({ length: 15 }, (_, i) => i + 8) // 08–22
 
 export default function DateTimePicker({
   label, value, onChange,
-  minDate, minHour = 8, maxHour = 22,
+  minDate,
   placeholder = 'Оберіть дату та час...', disabled
 }: Props) {
   const [open,        setOpen]        = useState(false)
