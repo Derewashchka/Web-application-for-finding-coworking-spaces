@@ -49,7 +49,7 @@ builder.Services.AddSingleton<IEncryptionService, EncryptionService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", policy =>
-        policy.WithOrigins("https://web-application-for-finding-coworki-one.vercel.app/")
+        policy.WithOrigins("https://web-application-for-finding-coworki-one.vercel.app")
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
