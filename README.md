@@ -25,7 +25,7 @@
 * BCrypt для хешування паролів
 
 **Database:**
-* MySQL Server 8.0
+* Ms SQL Server 8.0
 
 ## Основний функціонал
 
