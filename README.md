@@ -1,59 +1,59 @@
-# Вебзастосунок пошуку та бронювання коворкінгів
+# Web application for searching and booking coworking spaces
 
-Цей проєкт є розробкою єдиної інформаційної платформи для зручного пошуку, порівняння та бронювання гнучких робочих просторів в Україні. Проєкт створено в рамках кваліфікаційної бакалаврської роботи.
+This project is the development of a single information platform for convenient searching, comparing and booking flexible workspaces in Ukraine. The project was created as part of a qualifying bachelor's thesis.
 
 ## Live Demo
-* **Клієнтська частина (Frontend):** [Посилання на Vercel](https://web-application-for-finding-coworki-one.vercel.app/)
-* **Серверна частина (Backend API):** [Посилання на Render](https://web-application-for-finding-coworking.onrender.com/swagger/)
-* **База даних:** Розгорнута на Clever Cloud
+* **Frontend:** [Vercel Link](https://web-application-for-finding-coworki-one.vercel.app/)
+* **Backend API:** [Render Link](https://web-application-for-finding-coworking.onrender.com/swagger/)
+* **Database:** Deployed on Clever Cloud
 
-якщо до вебзастосунку не звертались 10-15 хвилин або більше, то може знадобитись певний час (не більше хвилини), щоб серверна частина вийшла з сну
-## Стек технологій
+if the web application has not been accessed for 10-15 minutes or more, it may take some time (no more than a minute) for the backend to wake up
+## Technology Stack
 
 **Frontend:**
-* React 18 та TypeScript
-* Збірка за допомогою Vite
-* Tailwind CSS 4 для utility-first стилізації
-* Zustand для управління глобальним станом
-* React Leaflet та OpenStreetMap для інтерактивної карти
-* Recharts для візуалізації графіків статистики
+* React 18 and TypeScript
+* Build using Vite
+* Tailwind CSS 4 for utility-first styling
+* Zustand for global state management
+* React Leaflet and OpenStreetMap for interactive map
+* Recharts for visualization of statistics graphs
 
 **Backend:**
-* C# та ASP.NET Core 9 Web API
+* C# and ASP.NET Core 9 Web API
 * Entity Framework Core 9 (ORM)
-* JWT Bearer для безпечної автентифікації та рольової моделі
-* BCrypt для хешування паролів
+* JWT Bearer for secure authentication and role model
+* BCrypt for password hashing
 
 **Database:**
 * Ms SQL Server 8.0
 
-## Основний функціонал
+## Main functionality
 
-Проєкт реалізує комплексну взаємодію між орендодавцями та клієнтами з чітким розмежуванням ролей:
+The project implements complex interaction between landlords and clients with a clear separation of roles:
 
-* **Гість (неавторизований користувач):**
-  * Перегляд публічного каталогу просторів з можливістю пошуку та застосування фільтрів.
-  * Візуальний пошук локацій на інтерактивній карті міста.
-  * Перегляд рейтингів та читання верифікованих відгуків.
+* **Guest (unauthorized user):**
+* Viewing a public catalog of spaces with the ability to search and apply filters.
+* Visually search for locations on an interactive city map.
+* Viewing ratings and reading verified reviews.
 
-* **Клієнт:**
-  * Бронювання робочих місць на конкретну дату та час.
-  * Автоматична перевірка конфліктів бронювань та наявності вільних місць у реальному часі.
-  * Генерація QR-коду для підтвердження успішного бронювання на локації.
-  * Управління списком збережених коворкінгів (Улюблені) та залишення відгуків після відвідування.
+* **Client:**
+* Booking workspaces for a specific date and time.
+* Automatic checking of booking conflicts and availability in real time.
+* Generating a QR code to confirm successful booking at locations.
+* Managing a list of saved coworkings (Favorites) and leaving reviews after visiting.
 
-* **Власник коворкінгу:**
-  * Зручний особистий кабінет для створення та редагування організації і коворкінгів.
-  * Управління вхідними запитами на бронювання від клієнтів (підтвердження / скасування).
-  * Доступ до аналітики: графіки доходів, популярні години та завантаженість по днях тижня.
+* **Coworking Owner:**
+* Convenient personal account for creating and editing an organization and coworkings.
+* Management of incoming booking requests from clients (confirmation / cancellation).
+* Access to analytics: revenue graphs, popular hours and workload by day of the week.
 
-* **Адміністратор:**
-  * Панель управління для модерації нових коворкінгів.
-  * Перегляд та управління всіма бронюваннями на платформі.
-  * Доступ до журналу аудиту для відстеження критичних дій у системі.
+* **Administrator:**
+* Control panel for moderating new coworkings.
+* View and manage all bookings on the platform.
+* Access to the audit log to track critical actions in the system.
 
-## Архітектура та Безпека
-Проєкт побудовано за класичною трирівневою клієнт-серверною архітектурою. Серверний шар реалізовано з використанням шаблону «Controller – Service – DbContext», що забезпечує слабку зв'язність компонентів. Усі персональні дані користувачів додатково шифруються за алгоритмом AES-256 безпосередньо перед записом до бази даних.
+## Architecture and Security
+The project is built according to the classic three-tier client-server architecture. The server layer is implemented using the “Controller – Service – DbContext” pattern, which ensures weak component coupling. All user personal data is additionally encrypted using the AES-256 algorithm immediately before being written to the database.
 
-## Автор
-**Кіщук Михайло** - розробка архітектури, frontend та backend компонентів, бази даних.
+## Author
+**Kishchuk Mykhailo** - development of architecture, frontend and backend components, database.
