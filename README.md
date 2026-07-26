@@ -31,23 +31,23 @@ if the web application has not been accessed for 10-15 minutes or more, it may t
 
 The project implements complex interaction between landlords and clients with a clear separation of roles:
 
-* **Guest (unauthorized user):**
+**Guest (unauthorized user):**
 * Viewing a public catalog of spaces with the ability to search and apply filters.
 * Visually search for locations on an interactive city map.
 * Viewing ratings and reading verified reviews.
 
-* **Client:**
+**Client:**
 * Booking workspaces for a specific date and time.
 * Automatic checking of booking conflicts and availability in real time.
 * Generating a QR code to confirm successful booking at locations.
 * Managing a list of saved coworkings (Favorites) and leaving reviews after visiting.
 
-* **Coworking Owner:**
+**Coworking Owner:**
 * Convenient personal account for creating and editing an organization and coworkings.
 * Management of incoming booking requests from clients (confirmation / cancellation).
 * Access to analytics: revenue graphs, popular hours and workload by day of the week.
 
-* **Administrator:**
+**Administrator:**
 * Control panel for moderating new coworkings.
 * View and manage all bookings on the platform.
 * Access to the audit log to track critical actions in the system.
